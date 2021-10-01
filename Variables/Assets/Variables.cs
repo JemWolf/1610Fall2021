@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Variables : MonoBehaviour
 {
- int x=6, y=10, z=0
+    int x = 6;
+    int y = 10;
+    int z = 0;
 
- z=x*y
-
-Console.WriteLine(z);
+    Console.WriteLine(z);
 }
