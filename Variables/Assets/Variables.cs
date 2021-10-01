@@ -1,9 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
 public class Variables : MonoBehaviour
 {
-    string myName = "Jai";
+    void Start ()
+    {
+        string myName = "Jai";
+
+        System.Console.WriteLine(myName);
+    }
+   
 }
 
