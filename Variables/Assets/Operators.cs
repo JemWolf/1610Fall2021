@@ -1,18 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
 public class Operators : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
-        
+        System.Console.WriteLine(10 * 5);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
