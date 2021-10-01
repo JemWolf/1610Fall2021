@@ -7,7 +7,7 @@ public class Variables : MonoBehaviour
     {
         string myName = "Jai";
 
-        System.Console.WriteLine(myName);
+        Debug.Log (myName);
     }
    
 }
