@@ -5,7 +5,7 @@ public class Operators : MonoBehaviour
 {
     void Start()
     {
-        System.Console.WriteLine(10 * 5);
+        Debug.Log(10 * 5);
     }
 
 }
