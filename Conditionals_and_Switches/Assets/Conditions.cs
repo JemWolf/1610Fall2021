@@ -6,9 +6,13 @@ public class Conditions : MonoBehaviour
 {
     void Start ()
     {
-        if (16  > 13)
+        if (13  > 16)
         {
-            Debug.Log("16 is greater than 13");
+            Debug.Log("13 is greater than 16");
+        }
+        else
+        {
+            Debug.Log("13 is not greater than 16");
         }
     }
   
