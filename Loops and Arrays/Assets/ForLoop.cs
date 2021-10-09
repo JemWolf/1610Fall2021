@@ -6,12 +6,12 @@ public class ForLoop : MonoBehaviour
 {
     void Start()
     {
-        int x = 0;
-        do
+        for (int x = 0; x < 10; x++)
+       
         {
             Debug.Log(x);
             x++;
         }
-        while (x < 10);
+      
     }
 }
