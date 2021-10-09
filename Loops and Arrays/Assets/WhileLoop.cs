@@ -7,10 +7,11 @@ public class WhileLoop : MonoBehaviour
     void Start()
     {
         int x = 0;
-        while (x < 10)
+        do
         {
             Debug.Log(x);
             x++;
         }
+        while (x < 10);
     }
 }
