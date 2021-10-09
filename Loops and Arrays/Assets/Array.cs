@@ -8,5 +8,9 @@ public class Array : MonoBehaviour
     void Start()
     {
         string[] dogs = { "Chihuahua", "Husky", "Yorkie", "German Shepherd" };
+        for (int x = 0; x < dogs.Length; x++)
+        {
+            Debug.Log(dogs[x]);
+        }
     }
 }
