@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1705358910946944890}
   - component: {fileID: 1705358910948028606}
   - component: {fileID: 1705358911349409808}
+  - component: {fileID: 2016720132}
   m_Layer: 0
   m_Name: Food_Organic_Apple_03
   m_TagString: Untagged
@@ -95,3 +96,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 40
+--- !u!114 &2016720132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705358910949994376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ebaca8f136ed5f4ebdb56340e2b1ff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
