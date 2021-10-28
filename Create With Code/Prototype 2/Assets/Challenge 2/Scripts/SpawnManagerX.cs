@@ -15,7 +15,8 @@ public class SpawnManagerX : MonoBehaviour
     private float minTime = 3.0f;
     private float maxTime = 5.0f;
 
-    private float startDelay = 1.0f;
+    //Commented out. Only needed for InvokeRepeating command
+    //private float startDelay = 1.0f;
     public float spawnInterval;
 
     void Start()
