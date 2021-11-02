@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 10;
     public float gravityModifier;
     public bool isOnGround = true;
-    public bool gameOver;
+    public bool gameOver = false;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +40,8 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Game Over");
             gameOver = true;
+            playerAnim.SetBool("Death_b", true);
+            playerAnim.SetInteger("DeathType_int", 1);
         }
     }
 
