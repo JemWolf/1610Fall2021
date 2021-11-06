@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float horizontalInput;
-    private float turnSpeed = 25.0f;
-    //public float speed = 20.0f;
+    //private float turnSpeed = 25.0f;
+    public float speed = 20.0f;
     public float xRange = 5.0f;
 
 
