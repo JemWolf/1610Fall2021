@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float horizontalInput;
     private float turnSpeed = 25.0f;
-    public float speed = 20.0f;
+    //public float speed = 20.0f;
     public float xRange = 5.0f;
 
 
@@ -31,6 +31,6 @@ public class PlayerController : MonoBehaviour
         }
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
-        transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed * horizontalInput);
+        //transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed * horizontalInput);
     }
     }
