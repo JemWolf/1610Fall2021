@@ -14,6 +14,7 @@ public class SpawnManagerX : MonoBehaviour
     public int enemyCount;
     public int waveCount = 1;
 
+    public static float enemySpeed = 10;
 
     public GameObject player;
     public GameObject enemy;
@@ -57,6 +58,7 @@ public class SpawnManagerX : MonoBehaviour
         }
 
         waveCount++;
+        enemySpeed = waveCount * 10;
         ResetPlayerPosition(); // put player back at start
 
     }
