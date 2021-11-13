@@ -5,12 +5,17 @@ using UnityEngine;
 public class PlayerControllerX : MonoBehaviour
 {
     private Rigidbody playerRb;
-    private float speed = 500;
+    private float speed = 700;
+    private float turboSpeedMultiplier = 7;
     private GameObject focalPoint;
+    public ParticleSystem turboSmoke;
 
+    public bool turboAvailable;
     public bool hasPowerup;
     public GameObject powerupIndicator;
     public int powerUpDuration = 5;
+    public float turboDuration = 0.5f;
+    public int turboWait = 5;
 
     private float normalStrength = 10; // how hard to hit enemy without powerup
     private float powerupStrength = 25; // how hard to hit enemy with powerup
@@ -19,6 +24,7 @@ public class PlayerControllerX : MonoBehaviour
     {
         playerRb = GetComponent<Rigidbody>();
         focalPoint = GameObject.Find("Focal Point");
+        turboAvailable = true;
     }
 
     void Update()
@@ -30,6 +36,27 @@ public class PlayerControllerX : MonoBehaviour
         // Set powerup indicator position to beneath player
         powerupIndicator.transform.position = transform.position + new Vector3(0, -0.6f, 0);
 
+    }
+    private void MoveForward()
+    {
+        float forwardInput = Input.GetAxis("Vertical");
+        if (Input.GetKeyDown(KeyCode.Space) && turboAvailable)
+        {
+            playerRb.AddForce(focalPoint.transform.forward * speed * forwardInput * turboSpeedMultiplier, ForceMode.Impulse);
+            StartCoroutine(TurboCooldown());
+            turboSmoke.Play();
+            turboAvailable = false;
+        }
+        else
+        {
+            playerRb.AddForce(focalPoint.transform.forward * speed * forwardInput);
+        }
+    }
+
+    IEnumerator TurboCooldown()
+    {
+        yield return new WaitForSeconds(turboWait);
+        turboAvailable = true;
     }
 
     // If Player collides with powerup, activate powerup
