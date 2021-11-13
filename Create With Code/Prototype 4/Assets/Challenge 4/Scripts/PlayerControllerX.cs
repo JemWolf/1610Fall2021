@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerControllerX : MonoBehaviour
 {
     private Rigidbody playerRb;
-    private float speed = 700;
+    private float speed = 2;
     private float turboSpeedMultiplier = 7;
     private GameObject focalPoint;
     public ParticleSystem turboSmoke;
@@ -14,7 +14,7 @@ public class PlayerControllerX : MonoBehaviour
     public bool hasPowerup;
     public GameObject powerupIndicator;
     public int powerUpDuration = 5;
-    public float turboDuration = 0.5f;
+    public float turboDuration = 2.0f;
     public int turboWait = 5;
 
     private float normalStrength = 10; // how hard to hit enemy without powerup
@@ -29,9 +29,10 @@ public class PlayerControllerX : MonoBehaviour
 
     void Update()
     {
+        MoveForward();
         // Add force to player in direction of the focal point (and camera)
-        float verticalInput = Input.GetAxis("Vertical");
-        playerRb.AddForce(focalPoint.transform.forward * verticalInput * speed * Time.deltaTime); 
+       // float verticalInput = Input.GetAxis("Vertical");
+         
 
         // Set powerup indicator position to beneath player
         powerupIndicator.transform.position = transform.position + new Vector3(0, -0.6f, 0);
@@ -40,6 +41,8 @@ public class PlayerControllerX : MonoBehaviour
     private void MoveForward()
     {
         float forwardInput = Input.GetAxis("Vertical");
+        playerRb.AddForce(focalPoint.transform.forward * forwardInput * speed * Time.deltaTime);
+
         if (Input.GetKeyDown(KeyCode.Space) && turboAvailable)
         {
             playerRb.AddForce(focalPoint.transform.forward * speed * forwardInput * turboSpeedMultiplier, ForceMode.Impulse);
