@@ -35,10 +35,10 @@ public class PlayerControllerX : MonoBehaviour
     // If Player collides with powerup, activate powerup
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Powerup"))
+        if (other.CompareTag("Powerup"))
         {
-            Destroy(other.gameObject);
             hasPowerup = true;
+            Destroy(other.gameObject);
             powerupIndicator.SetActive(true);
         }
     }

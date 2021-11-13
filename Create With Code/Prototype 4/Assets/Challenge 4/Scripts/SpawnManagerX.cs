@@ -15,15 +15,17 @@ public class SpawnManagerX : MonoBehaviour
     public int waveCount = 1;
 
 
-    public GameObject player; 
+    public GameObject player;
+    public GameObject enemy;
 
     // Update is called once per frame
     void Update()
     {
-        enemyCount = GameObject.FindGameObjectsWithTag("Powerup").Length;
+        enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
 
         if (enemyCount == 0)
         {
+            waveCount++;
             SpawnEnemyWave(waveCount);
         }
 
