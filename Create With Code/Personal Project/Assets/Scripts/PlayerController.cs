@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    private Rigidbody playerRb;
     public float horizontalInput;
     //private float turnSpeed = 25.0f;
     public float speed = 20.0f;
     public float xRange = 6.0f;
+    public float jumpForce = 10;
+    public bool isOnGround = true;
 
 
     // Start is called before the first frame update
@@ -32,5 +35,28 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
         //transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed * horizontalInput);
+
+        //jump control
+        if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
+        {
+            playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            isOnGround = false;         
+        }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isOnGround = true;
+        }
+        else if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            //Player will have death animation if it collides with enemy or obstacle
+        }
     }
+
+    
+
+}
