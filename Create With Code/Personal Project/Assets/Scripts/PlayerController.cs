@@ -51,11 +51,12 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
 
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("ground"))
         {
             isOnGround = true;
+            Debug.Log("Im on the ground");
         }
-        else if (collision.gameObject.CompareTag("Obstacle"))
+        else if (collision.gameObject.CompareTag("obstacle"))
         {
             //Player will have death animation if it collides with enemy or obstacle
         }
