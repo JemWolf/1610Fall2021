@@ -10,13 +10,16 @@ public class PlayerController : MonoBehaviour
     public float speed = 20.0f;
     public float xRange = 6.0f;
     public float jumpForce = 10;
+    public float gravityModifier;
     public bool isOnGround = true;
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        Physics.gravity *= gravityModifier;
+        playerRb = GetComponent<Rigidbody>();
+        //playerRb.AddForce(Vector3.up * 1000);
     }
 
     // Update is called once per frame
@@ -40,7 +43,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            isOnGround = false;         
+            isOnGround = false;
+            Debug.Log("I jumped");
         }
     }
 
