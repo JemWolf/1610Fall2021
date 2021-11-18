@@ -33,6 +33,7 @@ public class GameManagerX : MonoBehaviour
         score = 0;
         timer = 60;
         UpdateScore(0);
+        CountdownTimer();
         titleScreen.SetActive(false);
     }
 
