@@ -51,6 +51,7 @@ public class GameManagerX : MonoBehaviour
 
     public void CountdownTimer()
     {
+        Debug.Log("countdown started");
         timer -= Time.deltaTime;
         timerCountdown.text = "Time: " + Mathf.Round(timer);
     }
