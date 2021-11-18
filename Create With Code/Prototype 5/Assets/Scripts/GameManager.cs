@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameOverText.gameObject.SetActive(true);
-        restartButton.gameObject.SetActive(true);
+        restartButton.gameObject.SetActive(false);
         isGameActive = false;
     }
 
