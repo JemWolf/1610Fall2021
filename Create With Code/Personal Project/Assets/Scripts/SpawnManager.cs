@@ -6,7 +6,7 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject[] obstaclePrefabs;
     private float spawnRangeX = 6;
-    private float spawnPosZ = 60;
+    private float spawnPosZ = 33;
 
     // Start is called before the first frame update
     void Start()
