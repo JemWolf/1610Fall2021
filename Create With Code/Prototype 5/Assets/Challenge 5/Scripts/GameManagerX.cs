@@ -38,20 +38,20 @@ public class GameManagerX : MonoBehaviour
 
     private void update()
     {
-        if (isGameActive)
+        if (isGameActive == true)
         {
-            timer -= Time.deltaTime;
-            timer.SetText = "Time: " + Mathf.Round(timer);
-            if (timer < 0)
-            {
-                GameOver();
-            }
+            CountdownTimer();
+        }
+        if (timer < 0)
+        {
+            GameOver();
         }
     }
 
-    public void CountDownTimer()
+    public void CountdownTimer()
     {
-
+        timer -= Time.deltaTime;
+        timerCountdown.text = "Time: " + Mathf.Round(timer);
     }
 
     // While game is active spawn a random target
