@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class DifficultyButton : MonoBehaviour
 {
-    public int difficulty;
-
     private Button button;
     private GameManager gameManager;
+
+    public int difficulty;
 
     // Start is called before the first frame update
     void Start()
