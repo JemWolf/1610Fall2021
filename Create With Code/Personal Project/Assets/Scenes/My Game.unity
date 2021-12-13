@@ -204,8 +204,8 @@ MonoBehaviour:
   horizontalInput: 0
   speed: 20
   xRange: 6
-  jumpForce: 1
-  gravityModifier: 0
+  jumpForce: 2
+  gravityModifier: 1
   isOnGround: 1
 --- !u!54 &499496489
 Rigidbody:
@@ -319,11 +319,120 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &611177579 stripped
+--- !u!1 &611177579
 GameObject:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 1341862589241247485, guid: ccc3932acd7ed6f48b25d6681e3603fa, type: 3}
   m_PrefabInstance: {fileID: 1341862589850817174}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 611177584}
+  - component: {fileID: 611177583}
+  - component: {fileID: 611177582}
+  - component: {fileID: 611177581}
+  - component: {fileID: 611177580}
+  - component: {fileID: 611177585}
+  - component: {fileID: 611177586}
+  m_Layer: 0
+  m_Name: Raptor2
+  m_TagString: obstacle
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!54 &611177580
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 5766092545314146395, guid: ccc3932acd7ed6f48b25d6681e3603fa, type: 3}
+  m_PrefabInstance: {fileID: 1341862589850817174}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611177579}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!135 &611177581
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1341862589241247482, guid: ccc3932acd7ed6f48b25d6681e3603fa, type: 3}
+  m_PrefabInstance: {fileID: 1341862589850817174}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611177579}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &611177582
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1341862589241247483, guid: ccc3932acd7ed6f48b25d6681e3603fa, type: 3}
+  m_PrefabInstance: {fileID: 1341862589850817174}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611177579}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &611177583
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1341862589241247480, guid: ccc3932acd7ed6f48b25d6681e3603fa, type: 3}
+  m_PrefabInstance: {fileID: 1341862589850817174}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611177579}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &611177584
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1341862589241247481, guid: ccc3932acd7ed6f48b25d6681e3603fa, type: 3}
+  m_PrefabInstance: {fileID: 1341862589850817174}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611177579}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -6.77, y: 0.576, z: 22.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &611177585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -799,11 +908,120 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1941060625 stripped
+--- !u!1 &1941060625
 GameObject:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 8433601372997764690, guid: 6dd329924279e6d46866e32a512dadd6, type: 3}
   m_PrefabInstance: {fileID: 8433601371096578627}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1941060630}
+  - component: {fileID: 1941060629}
+  - component: {fileID: 1941060628}
+  - component: {fileID: 1941060627}
+  - component: {fileID: 1941060626}
+  - component: {fileID: 1941060631}
+  - component: {fileID: 1941060632}
+  m_Layer: 0
+  m_Name: Raptor1
+  m_TagString: obstacle
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!54 &1941060626
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: -2903273107507668643, guid: 6dd329924279e6d46866e32a512dadd6, type: 3}
+  m_PrefabInstance: {fileID: 8433601371096578627}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941060625}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!135 &1941060627
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 8433601372997764689, guid: 6dd329924279e6d46866e32a512dadd6, type: 3}
+  m_PrefabInstance: {fileID: 8433601371096578627}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941060625}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1941060628
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 8433601372997764688, guid: 6dd329924279e6d46866e32a512dadd6, type: 3}
+  m_PrefabInstance: {fileID: 8433601371096578627}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941060625}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 2e5911d26b7ae4049b5e9da7afe38949, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1941060629
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 8433601372997764695, guid: 6dd329924279e6d46866e32a512dadd6, type: 3}
+  m_PrefabInstance: {fileID: 8433601371096578627}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941060625}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1941060630
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 8433601372997764694, guid: 6dd329924279e6d46866e32a512dadd6, type: 3}
+  m_PrefabInstance: {fileID: 8433601371096578627}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941060625}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 6.76, y: 0.576, z: 24.600002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &1941060631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -884,6 +1102,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Raptor2
       objectReference: {fileID: 0}
+    - target: {fileID: 1341862589241247485, guid: ccc3932acd7ed6f48b25d6681e3603fa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccc3932acd7ed6f48b25d6681e3603fa, type: 3}
 --- !u!1001 &8175230457863766087
@@ -953,6 +1175,10 @@ PrefabInstance:
     - target: {fileID: 8433601372997764690, guid: 6dd329924279e6d46866e32a512dadd6, type: 3}
       propertyPath: m_Name
       value: Raptor1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433601372997764690, guid: 6dd329924279e6d46866e32a512dadd6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8433601372997764694, guid: 6dd329924279e6d46866e32a512dadd6, type: 3}
       propertyPath: m_RootOrder
