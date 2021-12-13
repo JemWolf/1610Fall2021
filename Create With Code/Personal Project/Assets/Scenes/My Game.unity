@@ -148,7 +148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8795244037842768830, guid: c9b8ae142009fd946b5989db9c2985ba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8795244037842768830, guid: c9b8ae142009fd946b5989db9c2985ba, type: 3}
       propertyPath: m_LocalPosition.z
@@ -207,6 +207,19 @@ MonoBehaviour:
   jumpForce: 2
   gravityModifier: 1
   isOnGround: 1
+--- !u!65 &499496485
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499496483}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.7522509, z: 3.6792488}
+  m_Center: {x: 0, y: 0.8501469, z: 0.36066818}
 --- !u!54 &499496489
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -2393,6 +2393,7 @@ GameObject:
   - component: {fileID: 2099392753869694300}
   - component: {fileID: 3150171136104799612}
   - component: {fileID: -7732219662357656174}
+  - component: {fileID: 3132351848744775104}
   m_Layer: 0
   m_Name: Raptor1
   m_TagString: Untagged
@@ -2613,6 +2614,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804868d077effaf4fb42cc4ef188e18f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &3132351848744775104
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5786431733838861179}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.7092235, z: 3.815071}
+  m_Center: {x: 0, y: 0.84561265, z: 0.425534}
 --- !u!1 &5840908085967259207
 GameObject:
   m_ObjectHideFlags: 0
