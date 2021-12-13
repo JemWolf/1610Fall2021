@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LoopBackground : MonoBehaviour
+public class LoopPlane : MonoBehaviour
 {
     public float speed = 10f;
     private Vector3 StartPosition;
@@ -17,7 +17,7 @@ public class LoopBackground : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.back * speed * Time.deltaTime);
-        if (transform.position.z < 13.5f)
+        if (transform.position.z < 12.3f)
         {
             transform.position = StartPosition;
         }
