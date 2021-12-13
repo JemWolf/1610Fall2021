@@ -4,21 +4,18 @@ using UnityEngine;
 
 public class LoopBackground : MonoBehaviour
 {
-    private Vector3 startPos;
-    private float repeatWidth;
+    public float speed = 10f;
+    private Vector3 StartPosition;
+
     // Start is called before the first frame update
     void Start()
     {
-        startPos = transform.position;
-        repeatWidth = GetComponent<BoxCollider>().size.x / 2;
+        StartPosition = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x < startPos.x - repeatWidth)
-        {
-            transform.position = startPos;
-        }
+        transform.Translate(Vector3.back * speed * Time.deltaTime);
     }
 }
