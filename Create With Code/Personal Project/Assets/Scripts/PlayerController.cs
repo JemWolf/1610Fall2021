@@ -49,7 +49,6 @@ public class PlayerController : MonoBehaviour
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             playerAnim.SetTrigger("Jump_trig");
             isOnGround = false;
-            Debug.Log("I jumped");
         }
     }
 
@@ -59,7 +58,6 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("ground"))
         {
             isOnGround = true;
-            Debug.Log("Im on the ground");
         }
         else if (collision.gameObject.CompareTag("obstacle"))
         {

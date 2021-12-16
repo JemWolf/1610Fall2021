@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 4172234733235080}
   - component: {fileID: 5506487200260570808}
   - component: {fileID: 284978140491932481}
+  - component: {fileID: -1248347655072637929}
   m_Layer: 0
   m_Name: P_Rock_01
   m_TagString: Untagged
@@ -155,3 +156,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+--- !u!114 &-1248347655072637929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291954423120672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 804868d077effaf4fb42cc4ef188e18f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
