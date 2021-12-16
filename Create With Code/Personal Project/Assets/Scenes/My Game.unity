@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8795244037842768830, guid: c9b8ae142009fd946b5989db9c2985ba, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8795244037842768830, guid: c9b8ae142009fd946b5989db9c2985ba, type: 3}
       propertyPath: m_LocalPosition.x
@@ -202,10 +202,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalInput: 0
-  speed: 20
+  speed: 17
   xRange: 6
-  jumpForce: 15
-  gravityModifier: 5
+  jumpForce: 20
+  gravityModifier: 7
   isOnGround: 1
 --- !u!65 &499496485
 BoxCollider:
@@ -761,7 +761,7 @@ Transform:
   m_LocalScale: {x: 19.559546, y: 1, z: 18.108965}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1597527223
 MonoBehaviour:
